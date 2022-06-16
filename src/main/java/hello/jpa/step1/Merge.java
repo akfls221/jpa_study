@@ -1,6 +1,8 @@
 package hello.jpa.step1;
 
 import hello.jpa.entity.Member;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.persistence.*;
 
@@ -11,6 +13,7 @@ public class Merge {
      */
 
     static EntityManagerFactory factory = Persistence.createEntityManagerFactory("practice");
+    private final static Logger logger = LoggerFactory.getLogger(Detach.class);
 
     public static void main(String[] args) {
 
@@ -31,16 +34,16 @@ public class Merge {
         //member = em2.merge(member); 준영속 엔티티를 참조하던 변수를 다시 영속 엔티티를 참조하도록 하는것이 안전하다. 현재는 테스트를 위해 적용 안함.
         tx2.commit();
 
-        System.out.println("member = " + member.getUsername()); //준영속 상태 > member의 경우 createMember에서 준영속상태로 return
-        System.out.println("mergeMember = " + mergeMember.getUsername()); // 영속상태(merge를 통해 새로운 영속상태의 엔티티 반환됨)
+        logger.info("member = " + member.getUsername()); //준영속 상태 > member의 경우 createMember에서 준영속상태로 return
+        logger.info("mergeMember = " + mergeMember.getUsername()); // 영속상태(merge를 통해 새로운 영속상태의 엔티티 반환됨)
 
         /**
          * contains
          * 영속성 컨텍스트가 파라미터로 넘어온 엔티티를 관리하는지 확인하는 메서드
          * 영속상태인지 체크
          */
-        System.out.println("em2.contains(member) = " + em2.contains(member)); //준영속 false
-        System.out.println("em2.contains(mergeMember) = " + em2.contains(mergeMember)); //영속 true
+        logger.info("em2.contains(member) = " + em2.contains(member)); //준영속 false
+        logger.info("em2.contains(mergeMember) = " + em2.contains(mergeMember)); //영속 true
 
 
     }
