@@ -11,6 +11,8 @@
             <property name="javax.persistence.jdbc.password" value="123"/>
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:tcp://localhost/~/jpa"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <!-- DB 자동생성 -->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
 
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
