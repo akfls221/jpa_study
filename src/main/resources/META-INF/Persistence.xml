@@ -3,6 +3,8 @@
     <persistence-unit name="practice">
 
         <class>hello.jpa.entity.Member</class>
+        <class>hello.jpa.step2.TestMember</class>
+        <class>hello.jpa.step2.TestTeam</class>
 
         <properties>
 
