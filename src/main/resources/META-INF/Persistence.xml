@@ -2,9 +2,13 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
     <persistence-unit name="practice">
 
-        <class>hello.jpa.entity.Member</class>
-        <class>hello.jpa.step2.TestMember</class>
-        <class>hello.jpa.step2.TestTeam</class>
+<!--        <class>hello.jpa.entity.Member</class>-->
+<!--        <class>hello.jpa.step2.TestMember</class>-->
+        <class>hello.jpa.practice1.OrderItem</class>
+        <class>hello.jpa.practice1.Order</class>
+        <class>hello.jpa.practice1.Member</class>
+        <class>hello.jpa.practice1.Item</class>
+
 
         <properties>
 
