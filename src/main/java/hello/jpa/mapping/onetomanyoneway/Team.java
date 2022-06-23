@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
