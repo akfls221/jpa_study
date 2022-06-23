@@ -4,10 +4,12 @@
 
 <!--        <class>hello.jpa.entity.Member</class>-->
 <!--        <class>hello.jpa.step2.TestMember</class>-->
-        <class>hello.jpa.practice1.OrderItem</class>
-        <class>hello.jpa.practice1.Order</class>
-        <class>hello.jpa.practice1.Member</class>
-        <class>hello.jpa.practice1.Item</class>
+<!--        <class>hello.jpa.practice1.OrderItem</class>-->
+<!--        <class>hello.jpa.practice1.Order</class>-->
+<!--        <class>hello.jpa.practice1.Member</class>-->
+<!--        <class>hello.jpa.practice1.Item</class>-->
+        <class>hello.jpa.mapping.manytooneoneway.Member</class>
+        <class>hello.jpa.mapping.manytooneoneway.Team</class>
 
 
         <properties>
