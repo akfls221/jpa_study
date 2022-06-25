@@ -19,15 +19,14 @@ public class ManyToOne {
         Member member = new Member("user1");
         Member member2 = new Member("user2");
         Team team = new Team("team1");
+        member.setTeam(team);
+        member2.setTeam(team);
 
         tx.begin();
         em.persist(team);
         em.persist(member);
         em.persist(member2);
 
-
-        member.setTeam(team);
-        member2.setTeam(team);
 
         tx.commit();
 
