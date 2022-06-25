@@ -1,10 +1,10 @@
-package hello.jpa.mapping.manytooneoneway;
+package hello.jpa.mapping.onetooneoneway;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 @NoArgsConstructor
@@ -13,17 +13,13 @@ public class Member {
 
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
 
     private String username;
 
-    @ManyToOne
-    @JoinColumn(name = "TEAM_ID")
-    private Team team;
-
-    public void setTeam(Team team) {
-        this.team = team;
-    }
+    @OneToOne
+    @JoinColumn(name = "LPCKER_ID")
+    private Locker locker;
 
     public Member(String username) {
         this.username = username;

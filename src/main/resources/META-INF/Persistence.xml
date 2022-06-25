@@ -12,9 +12,10 @@
 <!--        <class>hello.jpa.mapping.manytooneoneway.Team</class>-->
 <!--        <class>hello.jpa.mapping.manytoonetwoway.Member</class>-->
 <!--        <class>hello.jpa.mapping.manytoonetwoway.Team</class>-->
-        <class>hello.jpa.mapping.onetomanyoneway.Member</class>
-        <class>hello.jpa.mapping.onetomanyoneway.Team</class>
-
+<!--        <class>hello.jpa.mapping.onetomanyoneway.Member</class>-->
+<!--        <class>hello.jpa.mapping.onetomanyoneway.Team</class>-->
+        <class>hello.jpa.mapping.onetooneoneway.Member</class>
+        <class>hello.jpa.mapping.onetooneoneway.Locker</class>
 
         <properties>
 
