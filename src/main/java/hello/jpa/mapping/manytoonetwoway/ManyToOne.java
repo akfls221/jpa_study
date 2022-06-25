@@ -21,9 +21,9 @@ public class ManyToOne {
         Team team = new Team("team1");
 
         tx.begin();
+        em.persist(team);
         em.persist(member);
         em.persist(member2);
-        em.persist(team);
 
 
         member.setTeam(team);
