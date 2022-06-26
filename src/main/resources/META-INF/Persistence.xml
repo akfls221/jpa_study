@@ -16,8 +16,10 @@
 <!--        <class>hello.jpa.mapping.onetomanyoneway.Team</class>-->
 <!--        <class>hello.jpa.mapping.onetooneoneway.Member</class>-->
 <!--        <class>hello.jpa.mapping.onetooneoneway.Locker</class>-->
-                <class>hello.jpa.mapping.onetoonetwoway.Member</class>
-                <class>hello.jpa.mapping.onetoonetwoway.Locker</class>
+<!--        <class>hello.jpa.mapping.onetoonetwoway.Member</class>-->
+<!--        <class>hello.jpa.mapping.onetoonetwoway.Locker</class>-->
+        <class>hello.jpa.mapping.manytomanyoneway.Member</class>
+        <class>hello.jpa.mapping.manytomanyoneway.Product</class>
 
         <properties>
 
