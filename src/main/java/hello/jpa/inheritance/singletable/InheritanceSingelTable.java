@@ -1,4 +1,4 @@
-package hello.jpa.inheritance.tableperclass;
+package hello.jpa.inheritance.singletable;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,15 +9,16 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 /**
- * @Inheritance를 통해 상속 매핑전략을 선택함.(table per class)
- * @DiscriminatorColumn 사용하지 않음.
- * single table에서 단점이던 no null 제약조건을 하용할 수 있음.
- * 단점 : 자식 테이블을 통합해서 쿼리하기 어려움., 여러 자식 테이블을 함께 조회할 때 성능이 느림.
- * 주의 : 데이터베이스 설계자와 ORM 전문가 둘 다 추천하지 않는 전략으로 단일 테이블 혹은 조인 전략을 고려하자!
+ * @Inheritance를 통해 상속 매핑전략을 선택함.(single table)
+ * @DiscriminatorColumn을 통해 부모클래스에 구분 컬럼을 지정함.
+ * 조회할 때 조인을 사용하지 않으므로 일반적으로 가장 빠름
+ * 단점 : 자식 엔티티가 매핑한 컬름은 모두 null을 허용해야함.(사용하지 않는 컬럼이 있기 때문)
+ * 테이블 하나에 모든 것을 통합하므로 구분 컬럼을 필수로 사용해야 함.
+ * @DiscriminatorValue를 지정하지 않으면 기본적으로 엔티티 이름을 사용함.
  */
-public class Inheritancejoin {
+public class InheritanceSingelTable {
 
-    private final static Logger logger = LoggerFactory.getLogger(Inheritancejoin.class);
+    private final static Logger logger = LoggerFactory.getLogger(InheritanceSingelTable.class);
 
     public static void main(String[] args) {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("practice");

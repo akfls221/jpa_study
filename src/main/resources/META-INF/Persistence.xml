@@ -36,11 +36,12 @@
 <!--        <class>hello.jpa.inheritance.singletable.Album</class>-->
 <!--        <class>hello.jpa.inheritance.singletable.Book</class>-->
 <!--        <class>hello.jpa.inheritance.singletable.Movie</class>-->
-        <class>hello.jpa.inheritance.tableperclass.Movie</class>
-        <class>hello.jpa.inheritance.tableperclass.Album</class>
-        <class>hello.jpa.inheritance.tableperclass.Book</class>
-        <class>hello.jpa.inheritance.tableperclass.Item</class>
-
+<!--        <class>hello.jpa.inheritance.tableperclass.Movie</class>-->
+<!--        <class>hello.jpa.inheritance.tableperclass.Album</class>-->
+<!--        <class>hello.jpa.inheritance.tableperclass.Book</class>-->
+<!--        <class>hello.jpa.inheritance.tableperclass.Item</class>-->
+        <class>hello.jpa.inheritance.mappedsuperclass.Member</class>
+        <class>hello.jpa.inheritance.mappedsuperclass.Seller</class>
 
         <properties>
 
