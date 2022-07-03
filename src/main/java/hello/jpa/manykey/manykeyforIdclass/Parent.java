@@ -1,4 +1,4 @@
-package hello.jpa.manykey;
+package hello.jpa.manykey.manykeyforIdclass;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

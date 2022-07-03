@@ -42,8 +42,8 @@
 <!--        <class>hello.jpa.inheritance.tableperclass.Item</class>-->
 <!--        <class>hello.jpa.inheritance.mappedsuperclass.Member</class>-->
 <!--        <class>hello.jpa.inheritance.mappedsuperclass.Seller</class>-->
-        <class>hello.jpa.manykey.Parent</class>
-        <class>hello.jpa.manykey.Child</class>
+        <class>hello.jpa.manykey.manykeyforIdclass.Parent</class>
+        <class>hello.jpa.manykey.manykeyforIdclass.Child</class>
 
         <properties>
 

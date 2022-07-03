@@ -1,7 +1,5 @@
-package hello.jpa.manykey;
+package hello.jpa.manykey.manykeyforIdclass;
 
-import hello.jpa.mapping.manytomanybestway.ManyToMany;
-import hello.jpa.step1.PersistenceTest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

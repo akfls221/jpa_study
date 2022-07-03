@@ -1,6 +1,5 @@
-package hello.jpa.manykey;
+package hello.jpa.manykey.manykeyforIdclass;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
