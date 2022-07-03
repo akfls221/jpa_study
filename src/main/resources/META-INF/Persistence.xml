@@ -28,10 +28,14 @@
 <!--        <class>hello.jpa.mapping.manytomanybestway.Orders</class>-->
 <!--        <class>hello.jpa.mapping.manytomanybestway.Member</class>-->
 <!--        <class>hello.jpa.mapping.manytomanybestway.Product</class>-->
-        <class>hello.jpa.inheritance.join.Movie</class>
-        <class>hello.jpa.inheritance.join.Album</class>
-        <class>hello.jpa.inheritance.join.Book</class>
-        <class>hello.jpa.inheritance.join.Item</class>
+<!--        <class>hello.jpa.inheritance.join.Movie</class>-->
+<!--        <class>hello.jpa.inheritance.join.Album</class>-->
+<!--        <class>hello.jpa.inheritance.join.Book</class>-->
+<!--        <class>hello.jpa.inheritance.join.Item</class>-->
+        <class>hello.jpa.inheritance.singletable.Item</class>
+        <class>hello.jpa.inheritance.singletable.Album</class>
+        <class>hello.jpa.inheritance.singletable.Book</class>
+        <class>hello.jpa.inheritance.singletable.Movie</class>
 
 
         <properties>
