@@ -3,10 +3,7 @@ package hello.jpa.join.onetoonejoin;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
@@ -23,4 +20,8 @@ public class Child {
     public Child(String name) {
         this.name = name;
     }
+
+    //양방향 매핑시
+    @OneToOne(mappedBy = "child")
+    private Parent parent;
 }
