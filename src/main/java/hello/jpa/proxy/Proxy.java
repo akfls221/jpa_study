@@ -21,7 +21,7 @@ public class Proxy {
 
     private final static Logger logger = LoggerFactory.getLogger(Proxy.class);
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("practice");
         EntityManager em = emf.createEntityManager();
@@ -29,29 +29,38 @@ public class Proxy {
 
         tx.begin();
 
-        Member member = new Member("1", "member1");
-        Member member2 = new Member("2", "member2");
-        em.persist(member);
-        em.persist(member2);
+        try {
+            Member member = new Member("1", "member1");
+            Member member2 = new Member("2", "member2");
+            em.persist(member);
+            em.persist(member2);
 
-        em.flush();
-        em.clear(); //DB에 데이터만 저장하고 영속성 초기화
+            em.flush();
+            em.clear(); //DB에 데이터만 저장하고 영속성 초기화
 
-        Member reference = em.getReference(Member.class, "1");
-        Member reference2 = em.getReference(Member.class, "2");
-        logger.info("this is proxy 초기화 되었나요 : {}", emf.getPersistenceUnitUtil().isLoaded(reference));
-        reference.getName(); //쿼리 조회
-        logger.info("this is proxy 초기화 되었나요 : {}", emf.getPersistenceUnitUtil().isLoaded(reference));
+            Member reference = em.getReference(Member.class, "1");
+            Member reference2 = em.getReference(Member.class, "2");
+            logger.info("this is proxy 초기화 되었나요 : {}", emf.getPersistenceUnitUtil().isLoaded(reference));
+            reference.getName(); //쿼리 조회
+            logger.info("this is proxy 초기화 되었나요 : {}", emf.getPersistenceUnitUtil().isLoaded(reference));
 
-        tx.commit();
+            /**
+             * 준영속 상태의 오류
+             * LazyInitializationException 발생
+             */
+            //em.detach(reference2);
+            em.clear();
+            logger.info("this is proxy 초기화 되었나요 : {}", emf.getPersistenceUnitUtil().isLoaded(reference2));
+            reference2.getName();
+            logger.info("this is proxy 초기화 되었나요 : {}", emf.getPersistenceUnitUtil().isLoaded(reference2));
 
-        /**
-         * 준영속 상태의 오류
-         * LazyInitializationException 발생
-         */
-        em.close();
-        logger.error("this is Error {}", reference2.getName());
-
+            tx.commit();
+        } catch (Exception e) {
+            logger.error("error : ", e);
+            tx.rollback();
+        } finally {
+            em.close();
+        }
 
     }
 }
