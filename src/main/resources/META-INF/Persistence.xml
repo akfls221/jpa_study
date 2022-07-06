@@ -47,8 +47,9 @@
 <!--        <class>hello.jpa.manykey.manykeyforembeddedid.Parent</class>-->
 <!--        <class>hello.jpa.join.onetoonejoin.Parent</class>-->
 <!--        <class>hello.jpa.join.onetoonejoin.Child</class>-->
-        <class>hello.jpa.join.ontetomanyoneway.Parent</class>
-        <class>hello.jpa.join.ontetomanyoneway.Child</class>
+<!--        <class>hello.jpa.join.ontetomanyoneway.Parent</class>-->
+<!--        <class>hello.jpa.join.ontetomanyoneway.Child</class>-->
+        <class>hello.jpa.proxy.Member</class>
 
         <properties>
 
