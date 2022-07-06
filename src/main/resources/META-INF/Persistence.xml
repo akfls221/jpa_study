@@ -49,7 +49,9 @@
 <!--        <class>hello.jpa.join.onetoonejoin.Child</class>-->
 <!--        <class>hello.jpa.join.ontetomanyoneway.Parent</class>-->
 <!--        <class>hello.jpa.join.ontetomanyoneway.Child</class>-->
-        <class>hello.jpa.proxy.Member</class>
+<!--        <class>hello.jpa.proxy.Member</class>-->
+        <class>hello.jpa.fetchtype.eager.Member</class>
+        <class>hello.jpa.fetchtype.eager.Team</class>
 
         <properties>
 
