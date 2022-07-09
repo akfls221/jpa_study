@@ -50,8 +50,10 @@
 <!--        <class>hello.jpa.join.ontetomanyoneway.Parent</class>-->
 <!--        <class>hello.jpa.join.ontetomanyoneway.Child</class>-->
 <!--        <class>hello.jpa.proxy.Member</class>-->
-        <class>hello.jpa.fetchtype.eager.Member</class>
-        <class>hello.jpa.fetchtype.eager.Team</class>
+<!--        <class>hello.jpa.fetchtype.eager.Member</class>-->
+<!--        <class>hello.jpa.fetchtype.eager.Team</class>-->
+        <class>hello.jpa.fetchtype.lazy.Team</class>
+        <class>hello.jpa.fetchtype.lazy.Member</class>
 
         <properties>
 
