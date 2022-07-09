@@ -54,9 +54,11 @@
 <!--        <class>hello.jpa.fetchtype.eager.Team</class>-->
 <!--        <class>hello.jpa.fetchtype.lazy.Team</class>-->
 <!--        <class>hello.jpa.fetchtype.lazy.Member</class>-->
-        <class>hello.jpa.fetchtype.fetchtype_study.Member</class>
-        <class>hello.jpa.fetchtype.fetchtype_study.Team</class>
-        <class>hello.jpa.fetchtype.fetchtype_study.Order</class>
+<!--        <class>hello.jpa.fetchtype.fetchtype_study.Member</class>-->
+<!--        <class>hello.jpa.fetchtype.fetchtype_study.Team</class>-->
+<!--        <class>hello.jpa.fetchtype.fetchtype_study.Order</class>-->
+        <class>hello.jpa.cascase.persist.Child</class>
+        <class>hello.jpa.cascase.persist.Parent</class>
 
         <properties>
 
