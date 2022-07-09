@@ -57,8 +57,10 @@
 <!--        <class>hello.jpa.fetchtype.fetchtype_study.Member</class>-->
 <!--        <class>hello.jpa.fetchtype.fetchtype_study.Team</class>-->
 <!--        <class>hello.jpa.fetchtype.fetchtype_study.Order</class>-->
-        <class>hello.jpa.cascase.persist.Child</class>
-        <class>hello.jpa.cascase.persist.Parent</class>
+<!--        <class>hello.jpa.cascase.persist.Child</class>-->
+<!--        <class>hello.jpa.cascase.persist.Parent</class>-->
+        <class>hello.jpa.cascase.delete.Child</class>
+        <class>hello.jpa.cascase.delete.Parent</class>
 
         <properties>
 
