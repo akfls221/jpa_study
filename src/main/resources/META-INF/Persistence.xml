@@ -63,7 +63,7 @@
 <!--        <class>hello.jpa.cascase.delete.Parent</class>-->
 <!--        <class>hello.jpa.cascase.orphan.Parent</class>-->
 <!--        <class>hello.jpa.cascase.orphan.Child</class>-->
-        <class>hello.jpa.valuetype.embedded.Member</class>
+        <class>hello.jpa.valuetype.attributeoverride.Member</class>
 
         <properties>
 
