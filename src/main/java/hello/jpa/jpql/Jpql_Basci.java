@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * JPQL
@@ -53,6 +54,24 @@ public class Jpql_Basci {
              * 반환하는 타입이 명확하지 않은 경우
              */
             Query query1 = em.createQuery("select m.name from Member m where m.name = '엄태권'");
+
+
+            /**
+             * getResultList()
+             * 결과를 예제로 반환, 만약 결과가 없으면 빈 컬렉션을 반환
+             */
+            List<Member> resultList = em.createQuery("select m from Member m where m.name = '엄태권'", Member.class)
+                    .getResultList();
+
+            /**
+             * getSingleResult()
+             * 결과가 정확히 하나일 때 사용
+             * 결과가 없으면 javax.persistence.NoResultException 예외가 발생
+             * 결과과 1개보다 많으면 javax.persistence.NonUniqueResultException 발생
+             */
+            Member singleResult = em.createQuery("select m from Member m where m.name = '엄태권'", Member.class)
+                    .getSingleResult();
+
 
 
             tx.commit();
