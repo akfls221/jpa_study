@@ -3,10 +3,7 @@ package hello.jpa.jpql;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.*;
 
 /**
  * JPQL
@@ -44,6 +41,18 @@ public class Jpql_Basci {
                     .getSingleResult();
 
             logger.info("select 문 조회 결과 : {}", result.getName());
+
+            /**
+             * TypeQuery
+             * 반환하는 타입이 명확한 경우 사용가능(2번째 파라미터를 지정시)
+             */
+            TypedQuery<Member> query = em.createQuery("select m.name from Member m where m.name = '엄태권'", Member.class);
+
+            /**
+             * Query
+             * 반환하는 타입이 명확하지 않은 경우
+             */
+            Query query1 = em.createQuery("select m.name from Member m where m.name = '엄태권'");
 
 
             tx.commit();
