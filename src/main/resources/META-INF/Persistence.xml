@@ -64,8 +64,9 @@
 <!--        <class>hello.jpa.cascase.orphan.Parent</class>-->
 <!--        <class>hello.jpa.cascase.orphan.Child</class>-->
 <!--        <class>hello.jpa.valuetype.attributeoverride.Member</class>-->
-        <class>hello.jpa.valuetype.listtypeembedded.Member</class>
-        <class>hello.jpa.valuetype.listtypeembedded.Address</class>
+<!--        <class>hello.jpa.valuetype.listtypeembedded.Member</class>-->
+<!--        <class>hello.jpa.valuetype.listtypeembedded.Address</class>-->
+        <class>hello.jpa.jpql.Member</class>
 
         <properties>
 
