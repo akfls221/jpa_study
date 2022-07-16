@@ -73,6 +73,24 @@ public class Jpql_Basci {
                     .getSingleResult();
 
 
+            /**
+             * 파라미터 바인딩
+             * @이름 기준 파라미터 바인등
+             * 파라미터를 이름으로 구분하는 방법이며, 앞에 :을 사용
+             */
+            String paramName = "엄태권";
+            em.createQuery("select m from Member m where m.name =: username")
+                    .setParameter("username", paramName)
+                    .getSingleResult();
+
+            /**
+             * 위치 기준 파라미터
+             * 위치 기준 파리미터를 사용하려면 ? 다음에 위치 값을 주면 된다.(1부터 시작함)
+             * #참고 : 위치 기준 파리미터 방식보다는 이름 기준 파리미터 바인딩 방식을 사용하는 것이 더 명확함.
+             */
+            em.createQuery("select m from Member m where m.name =?1", Member.class)
+                    .setParameter(1, paramName)
+                    .getSingleResult();
 
             tx.commit();
         } catch (Exception e) {
