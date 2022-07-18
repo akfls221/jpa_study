@@ -1,4 +1,4 @@
-package hello.jpa.jpql;
+package hello.jpa.jpql.basic;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
