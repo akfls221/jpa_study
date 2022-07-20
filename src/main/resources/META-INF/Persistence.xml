@@ -67,8 +67,10 @@
 <!--        <class>hello.jpa.valuetype.listtypeembedded.Member</class>-->
 <!--        <class>hello.jpa.valuetype.listtypeembedded.Address</class>-->
 <!--        <class>hello.jpa.jpql.basic.Member</class>-->
-        <class>hello.jpa.jpql.projection.Member</class>
-        <class>hello.jpa.jpql.projection.Address</class>
+<!--        <class>hello.jpa.jpql.projection.Member</class>-->
+<!--        <class>hello.jpa.jpql.projection.Address</class>-->
+        <class>hello.jpa.jpql.join.innerjoin.Member</class>
+        <class>hello.jpa.jpql.join.innerjoin.Team</class>
 
         <properties>
 
