@@ -26,17 +26,24 @@ public class FetchJoin_Basic {
 
         try {
             //Team 생성
-            Team team = new Team("teamA");
-            em.persist(team);
+            Team teamA = new Team("teamA");
+            em.persist(teamA);
+
+            Team teamB = new Team("teamB");
+            em.persist(teamB);
 
             //Member 생성
-            Member member = new Member("엄태권");
-            member.setTeam(team);
-            em.persist(member);
+            Member member1 = new Member("엄태권1");
+            member1.setTeam(teamA);
+            em.persist(member1);
+
+            Member member2 = new Member("엄태권2");
+            member2.setTeam(teamB);
+            em.persist(member2);
             em.flush();
             em.clear();
 
-            //InnerJoin JPQL
+            //join fetch basic
             List<Member> resultList = em.createQuery("select m from Member m join fetch m.team", Member.class)
                     .getResultList();
 
@@ -44,7 +51,21 @@ public class FetchJoin_Basic {
                 logger.info("this is findMember and Team join fetch {}, {}", findMember.getName(), findMember.getTeam().getTeamName());
             }
 
+            //collection join fetch
+            /**
+             * @참고 : toString 순환참조 발생 조심(양방향의 경우 서로 객체를 참조하고 있어 객체 출력시 toString이 호출되는데 이때 무한루프에 빠짐
+             *       즉 하나의 to String을 제거하거나, @ToString(exclude = "상대방의 Entity") 를통해 출력하는게 좋음.
+             */
+            List<Team> resultTeam = em.createQuery("select t from Team t join fetch t.member where t.teamName = 'teamA'", Team.class)
+                    .getResultList();
 
+            for (Team team : resultTeam) {
+                logger.info("this is one to many fetch join(collection join fetch) team : {}", team);
+
+                for (Member listMember : team.getMember()) {
+                    logger.info("this is one to many fetch join(Collection join fetch) member : {}", listMember);
+                }
+            }
 
 
             tx.commit();
