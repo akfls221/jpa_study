@@ -71,8 +71,8 @@
 <!--        <class>hello.jpa.jpql.projection.Address</class>-->
 <!--        <class>hello.jpa.jpql.join.innerjoin.Member</class>-->
 <!--        <class>hello.jpa.jpql.join.innerjoin.Team</class>-->
-        <class>hello.jpa.jpql.join.outerjoin.Member</class>
-        <class>hello.jpa.jpql.join.outerjoin.Team</class>
+        <class>hello.jpa.jpql.join.fetchjoin.Team</class>
+        <class>hello.jpa.jpql.join.fetchjoin.Member</class>
 
         <properties>
 
