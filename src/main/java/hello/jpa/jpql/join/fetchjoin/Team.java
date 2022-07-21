@@ -2,11 +2,11 @@ package hello.jpa.jpql.join.fetchjoin;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,7 +20,17 @@ public class Team {
 
     private String teamName;
 
+    @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
+    private List<Member> member = new ArrayList<>();
+
     public Team(String teamName) {
         this.teamName = teamName;
+    }
+
+    void addMember(Member member) {
+        this.getMember().add(member);
+        if (member.getTeam() != this) {
+            member.setTeam(this);
+        }
     }
 }

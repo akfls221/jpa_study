@@ -1,13 +1,13 @@
 package hello.jpa.jpql.join.fetchjoin;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 public class Member {
 
     @Id
@@ -22,5 +22,12 @@ public class Member {
 
     public Member(String name) {
         this.name = name;
+    }
+
+    void setTeam(Team team) {
+        this.team = team;
+        if (!team.getMember().contains(this)) {
+            team.getMember().add(this);
+        }
     }
 }
