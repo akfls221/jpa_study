@@ -73,9 +73,12 @@
 <!--        <class>hello.jpa.jpql.join.innerjoin.Team</class>-->
 <!--        <class>hello.jpa.jpql.join.fetchjoin.Team</class>-->
 <!--        <class>hello.jpa.jpql.join.fetchjoin.Member</class>-->
-        <class>hello.jpa.pathexpression.Member</class>
-        <class>hello.jpa.pathexpression.Team</class>
-        <class>hello.jpa.pathexpression.Order</class>
+<!--        <class>hello.jpa.pathexpression.Member</class>-->
+<!--        <class>hello.jpa.pathexpression.Team</class>-->
+<!--        <class>hello.jpa.pathexpression.Order</class>-->
+        <class>hello.jpa.다형성쿼리.Item</class>
+        <class>hello.jpa.다형성쿼리.Album</class>
+        <class>hello.jpa.다형성쿼리.Book</class>
 
         <properties>
 
