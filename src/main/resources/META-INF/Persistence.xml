@@ -79,8 +79,9 @@
 <!--        <class>hello.jpa.다형성쿼리.Item</class>-->
 <!--        <class>hello.jpa.다형성쿼리.Album</class>-->
 <!--        <class>hello.jpa.다형성쿼리.Book</class>-->
-        <class>hello.jpa.namedQuery.Member</class>
-        <class>hello.jpa.namedQuery.Team</class>
+<!--        <class>hello.jpa.namedQuery.Member</class>-->
+<!--        <class>hello.jpa.namedQuery.Team</class>-->
+        <class>hello.jpa.querydsl.Member</class>
 
         <properties>
 
