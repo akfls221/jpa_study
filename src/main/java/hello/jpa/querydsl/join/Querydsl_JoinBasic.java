@@ -14,10 +14,12 @@ import java.util.List;
 import static hello.jpa.querydsl.join.QOrder.*;
 import static hello.jpa.querydsl.join.QOrderMember.*;
 import static hello.jpa.querydsl.join.QOrderItem.*;
+import static hello.jpa.querydsl.join.QOtherMember.*;
 
 /**
  * join(연관관계 있는 join)
  * join(조인 대상, 별칭으로 사용할 쿼리 타입(QClass)
+ * 조인의 기본 문법은 첫 번째 파라미터에 조인 대상을 지정하고, 두번쨰 파라미터에 별칭으로 사용할 Q 타입을 지정하면 된다.
  */
 public class Querydsl_JoinBasic {
 
@@ -73,6 +75,23 @@ public class Querydsl_JoinBasic {
         for (Order orderResult : result) {
             logger.info("this is join... on where orderMember name = 엄태권 : {}", orderResult);
         }
+
+        /**
+         * 연관관계 없는 조인
+         * select 대상 지정후, from에 조회할 엔티티와 연관관계가 없는 엔티티를 넣음.(연관관계가 없기 때문에 두군대서 조회)
+         * where조건으로 join  실행
+         */
+        OtherMember member1 = new OtherMember();
+        member1.setName("엄태권");
+        em.persist(member1);
+
+        OrderMember memberResult = queryFactory
+                .select(orderMember)
+                .from(orderMember, otherMember)
+                .where(orderMember.name.eq("엄태권"))
+                .fetchOne();
+
+        logger.info("연관관계가 없는 엔티티 조인 : {}", memberResult);
 
         tx.commit();
     }
