@@ -85,6 +85,7 @@
         <class>hello.jpa.querydsl.join.OrderMember</class>
         <class>hello.jpa.querydsl.join.OrderItem</class>
         <class>hello.jpa.querydsl.join.Order</class>
+        <class>hello.jpa.querydsl.join.OtherMember</class>
 
         <properties>
 
