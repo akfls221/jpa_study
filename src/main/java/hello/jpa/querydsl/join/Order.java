@@ -24,7 +24,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "member_id")
-    private OrderMember member;
+    private OrderMember orderMember;
 
     public void addItem(OrderItem orderItem) {
         this.getOrderItemList().add(orderItem);
