@@ -82,6 +82,9 @@
 <!--        <class>hello.jpa.namedQuery.Member</class>-->
 <!--        <class>hello.jpa.namedQuery.Team</class>-->
         <class>hello.jpa.querydsl.Member</class>
+        <class>hello.jpa.querydsl.join.OrderMember</class>
+        <class>hello.jpa.querydsl.join.OrderItem</class>
+        <class>hello.jpa.querydsl.join.Order</class>
 
         <properties>
 
