@@ -18,13 +18,15 @@ public class Order {
     @Column(name = "order_id")
     private Long id;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id")
     private List<OrderItem> orderItemList = new ArrayList<>();
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private OrderMember orderMember;
+
+    private String name;
 
     public void addItem(OrderItem orderItem) {
         this.getOrderItemList().add(orderItem);
