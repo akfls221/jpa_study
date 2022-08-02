@@ -7,7 +7,7 @@ import lombok.ToString;
 
 //@Data
 @NoArgsConstructor
-@Setter
+//@Setter
 @ToString
 public class SelectDto {
 
