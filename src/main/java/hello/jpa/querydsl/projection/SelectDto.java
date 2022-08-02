@@ -1,8 +1,14 @@
 package hello.jpa.querydsl.projection;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
-@Data
+//@Data
+@NoArgsConstructor
+@Setter
+@ToString
 public class SelectDto {
 
     private int age;
