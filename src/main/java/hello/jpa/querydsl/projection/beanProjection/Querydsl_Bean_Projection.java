@@ -1,6 +1,5 @@
 package hello.jpa.querydsl.projection.beanProjection;
 
-import com.querydsl.core.Tuple;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import hello.jpa.querydsl.Member;
@@ -48,7 +47,7 @@ public class Querydsl_Bean_Projection {
 
         /**
          * 프로퍼티를 통한 프로젝션 입력
-         * com.mysema.query.Projections 를 사용함.
+         * com.querydsl.core.types.Projections 를 사용함.
          * @참고 : new Instance로 생성하기 때문에 기본 생성자가 필수임.(setter를 통해 값을 채우기 때문에 setter 필요함) -> 기본생성자, setter 필수
          * 쿼리 결과와 매핑할 프로퍼티 이름이 다르면 as를 통해 별칭을 줄 수 있음.
          * ex : item.name.as("username")
